@@ -1,0 +1,31 @@
+.tasks__container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+}
+
+.task{
+    color: var(--color-grey-1);
+    font-size: 2rem;
+    margin-top: 3rem;
+    background-color: #fff;
+    width: 65%;
+    padding: 2rem 2rem;
+    border-radius: 20px;
+    display: flex;
+}
+
+.task__color{
+    display: inline-block;
+    margin-right: 2rem;
+    clip-path: circle();
+    height: 100%;
+    min-width: 20px;
+}
+
+.task__text{
+    display: inline-block;
+    align-self: center;
+}

@@ -1,0 +1,37 @@
+.user{
+    width: 85%;
+    margin: 2.5rem auto;
+    border-radius: 5px;
+    display: flex;
+    align-self: center;
+}
+
+.user__img{
+    clip-path: circle();
+    max-width: 8rem;
+    overflow: hidden;
+    justify-self: start;
+}
+
+.user__img img{
+    width: 100%;
+    box-sizing: content-box;
+    vertical-align: middle;
+}
+
+.user__name{
+    margin-left: 2rem;
+    color: var(--color-primary);
+    flex-grow: 1;
+    align-self: center;
+    font-size: 2.3rem;
+    display: block;
+}
+
+.logoText{
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: .5rem;
+    color: var(--color-grey-1);
+}

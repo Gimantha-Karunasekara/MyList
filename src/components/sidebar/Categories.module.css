@@ -1,0 +1,29 @@
+.categories__container{
+    margin-top: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+}
+
+.category{
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    cursor: pointer;
+    color: var(--color-grey-1);
+}
+
+.category__selected i{
+    color: var(--color-secondary);
+}
+
+.category__name{
+    margin-left: 3rem;
+    display: inline-block;
+}
+
+.category__icon{
+    display: inline-block;
+}

@@ -1,0 +1,14 @@
+.content{
+    flex: 0 0 80%;
+    background-color: var(--color-primary);
+    display: flex;
+}
+
+.noItems{
+    color: rgba(255, 255, 255, .8);
+    font-size: 5rem;
+    flex-grow: 1;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
