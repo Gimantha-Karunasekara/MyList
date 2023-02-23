@@ -2,6 +2,16 @@
     flex: 0 0 80%;
     background-color: var(--color-primary);
     display: flex;
+    flex-direction: column;
+}
+
+.content__title{
+    align-self: center;
+    font-weight: bolder;
+    margin-top: 5rem;
+    width: 70%;
+    font-size: 4rem;
+    color: #fff;
 }
 
 .noItems{
@@ -12,3 +22,4 @@
     justify-self: center;
     text-align: center;
 }
+

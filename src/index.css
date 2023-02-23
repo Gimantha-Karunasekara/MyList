@@ -3,6 +3,7 @@
   --color-secondary: #ca8bfe;
 
   --color-grey-1: #6c757d;
+  --color-grey-2: #ced4da;
 }
 
 *{
@@ -19,8 +20,10 @@
 html{
   box-sizing: border-box;
   font-size: 62.5%; 
+  color: var(--color-grey-1);
 }
 
 body{
   font-family: 'Varela Round', sans-serif;
+
 }

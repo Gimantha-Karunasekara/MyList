@@ -12,6 +12,7 @@
     margin: 1rem auto;
     padding: 1.5rem;
     cursor: pointer;
+    display: flex;
     color: var(--color-grey-1);
 }
 
@@ -20,10 +21,30 @@
 }
 
 .category__name{
-    margin-left: 3rem;
+    flex-grow: 1;
+    margin-left: 2rem;
     display: inline-block;
+    transition: all .2s;
+}
+
+.category__name:hover{
+    color: var(--color-secondary);
 }
 
 .category__icon{
     display: inline-block;
+}
+
+.category__delete{
+    display: inline-block;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.category:hover .category__delete{
+    opacity: 1;
+}
+
+.category__delete:hover{
+    color: var(--color-secondary);
 }

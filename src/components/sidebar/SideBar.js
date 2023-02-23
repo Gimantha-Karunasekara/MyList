@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Divider from '../common/Divider';
+import AddCategory from './AddCategory';
 import Categories from './Categories';
 import classes from './SideBar.module.css';
 import User from './User';
@@ -11,11 +12,17 @@ const USER = {
 }
 
 const SideBar = () => {
+
+  // For add category text box (to show and hide)
+
+  
+
   return (
     <div className={classes.sidebar}>
         <User userData={USER}/>
         <Divider/>
         <Categories categories={USER.categories}/>
+        <AddCategory/>
     </div>
   )
 }

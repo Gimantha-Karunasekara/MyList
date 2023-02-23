@@ -1,14 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import SideBar from './components/sidebar/SideBar';
-import Content from './components/content/Content';
-import { Fragment } from 'react';
+import Auth from './components/auth/Auth';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
-    <div className='container'>
-      <SideBar />
-      <Content />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/auth' element={<Auth/>}/>
+      </Routes>
+    </Router>
   );
 }
 

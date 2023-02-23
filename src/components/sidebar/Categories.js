@@ -8,9 +8,12 @@ const Categories = ({categories}) => {
 
             {categories.map((c) => {
                 return (
-                    <div className={`${classes.category} ${classes.category__selected}`}>
-                        <i class="fa-solid fa-list category__icon"></i>
+                    <div className={`${classes.category}`}>
+                        <i className="fa-solid fa-list category__icon"></i>
                         <div className={classes.category__name}>{c}</div>
+                        <div className={classes.category__delete}>
+                            <i className="fa-solid fa-trash-can"></i>
+                        </div>
                     </div>
                 )
             })

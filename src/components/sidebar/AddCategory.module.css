@@ -1,0 +1,60 @@
+.addCategory{
+    width: 70%;
+    display: block;
+    font-size: 2rem;
+    color: var(--color-grey-1);
+    margin: 2rem;
+    align-self: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.addCategory__button{
+    outline: none;
+    margin-left: 2rem;
+    text-decoration: none;
+    border:none;
+    font-size: inherit;
+    background-color: #fff;
+    color: var(--color-grey-1);
+    cursor: pointer;
+}
+
+.addCategory__button-icon{
+    margin-right: 1rem;
+}
+
+.addCategory__button:hover{
+    color: var(--color-secondary);
+}
+
+.addCategory__input-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.addCategory__input:focus{
+    outline-color: var(--color-secondary);
+}
+
+.addCategory__input{
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 2rem;
+    border: 1px solid var(--color-grey-1);
+    border-radius: 10px;
+}
+
+.addCategory__close, .addCategory__add{
+    cursor: pointer;
+}
+
+.addCategory__close:hover,
+.addCategory__add:hover,
+.addCategory__close:focus,
+.addCategory__add:focus
+{
+    color: var(--color-secondary);
+}
