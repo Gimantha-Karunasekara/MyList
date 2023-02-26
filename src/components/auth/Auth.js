@@ -21,7 +21,7 @@ const Auth = () => {
 
         if (isLogin) {
             try {
-                const response = await sendRequest("http://localhost:5000/api/users/login", 'POST', JSON.stringify({
+                const response = await sendRequest(process.env.REACT_APP_BACKEND_URL + '/users/login', 'POST', JSON.stringify({
                     email: emailRef.current.value,
                     password: passwordRef.current.value
                 }),
@@ -38,7 +38,7 @@ const Auth = () => {
         }
         else{
             try {
-                const response = await sendRequest("http://localhost:5000/api/users/signup", 'POST', JSON.stringify({
+                const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, 'POST', JSON.stringify({
                     username: nameRef.current.value,
                     email: emailRef.current.value,
                     password: passwordRef.current.value

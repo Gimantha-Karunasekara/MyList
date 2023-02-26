@@ -6,7 +6,7 @@ import Tasks from './Tasks';
 
 const Content = ({ category }) => {
 
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { sendRequest} = useHttpClient();
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState();
 
