@@ -23,7 +23,7 @@ const SideBar = ({changeCategory, selectedCategory}) => {
 
       const fetchCatgeories = async () => {
           try {
-              const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/categories/${AuthCtx.userId}`);
+              const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/categories/${AuthCtx.userId}`);
               setCategories(response.categories);
           } catch (error) {
               
