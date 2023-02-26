@@ -29,7 +29,7 @@ const AddCategory = ({ onCreateCategory }) => {
         if (name && name !== "") {
             try {
 
-                const response = await sendRequest('http://localhost:5000/api/categories', 'POST', JSON.stringify({
+                const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/categories`, 'POST', JSON.stringify({
                     "userId": authCtx.userId,
                     "name": name
                 }),

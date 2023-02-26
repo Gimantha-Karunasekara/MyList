@@ -11,7 +11,7 @@ const Task = ({id, text, color, onDelete}) => {
     const onDeleteHandler = async (event) => {
 
         try {
-            await sendRequest(`http://localhost:5000/api/tasks/${id}`, 'DELETE', null, {});
+            await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/tasks/${id}`, 'DELETE', null, {});
             if (!error) {
                 onDelete(id);
             }

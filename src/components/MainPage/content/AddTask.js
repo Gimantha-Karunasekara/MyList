@@ -27,7 +27,7 @@ const AddTask = ({ onAdd, category }) => {
       }
     });
 
-    const response = await sendRequest('http://localhost:5000/api/tasks', 'POST', JSON.stringify({
+    const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/tasks`, 'POST', JSON.stringify({
       userId: authCtx.userId,
       category: category,
       text: text,

@@ -21,7 +21,7 @@ const Auth = () => {
 
         if (isLogin) {
             try {
-                const response = await sendRequest(process.env.REACT_APP_BACKEND_URL + '/users/login', 'POST', JSON.stringify({
+                const response = await sendRequest(process.env.process.env.REACT_APP_BACKEND_URL + '/users/login', 'POST', JSON.stringify({
                     email: emailRef.current.value,
                     password: passwordRef.current.value
                 }),

@@ -13,7 +13,7 @@ const Content = ({ category }) => {
   useEffect(() => {
     if (category && category !== "" ) {
       const fetchTasks = async () => {
-        const response = await sendRequest(`http://localhost:5000/api/tasks/${category}`)
+        const response = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/tasks/${category}`)
         if (response) {
           setTitle(response.name);
           setTasks(response.tasks);
