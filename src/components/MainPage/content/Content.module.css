@@ -2,24 +2,36 @@
     flex: 0 0 80%;
     background-color: var(--color-primary);
     display: flex;
+    align-content: center;
+    justify-content: center;
     flex-direction: column;
+    animation: fadeIn 2s ease;
 }
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    } 
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 .content__title{
     align-self: center;
     font-weight: bolder;
     margin-top: 5rem;
     width: 70%;
-    font-size: 4rem;
+    font-size: 5rem;
     color: #fff;
 }
 
-.noItems{
-    color: rgba(255, 255, 255, .8);
-    font-size: 5rem;
-    flex-grow: 1;
+.content__msg{
+    color: rgba(255, 255, 255, .9);
+    font-size: 4rem;
     align-self: center;
     justify-self: center;
-    text-align: center;
 }
 

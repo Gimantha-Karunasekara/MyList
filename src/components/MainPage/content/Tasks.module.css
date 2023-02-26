@@ -1,0 +1,28 @@
+.tasks__container{
+    align-self: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1rem;
+    min-height: min-content;
+    overflow: auto;
+    direction: rtl;
+}
+
+.tasks__container::-webkit-scrollbar{
+    display: block;
+    border-radius: 10px;
+    width: 10px;
+    height: 90%;
+    background: rgba(255, 255, 255, .6);
+}
+
+.tasks__container::-webkit-scrollbar-thumb{
+    background-color: rgba(202, 139, 254, .6);
+    border-radius: 10px;
+}
+
+

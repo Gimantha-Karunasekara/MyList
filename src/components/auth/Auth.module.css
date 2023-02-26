@@ -8,11 +8,25 @@
     display: flex;
     overflow: hidden;
     box-shadow: 0 1rem 5rem rgba(0,0,0, .3);
+    animation: fadeIn 2s ease ;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        scale: 50%;
+    }
+    100%{
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
 .auth__content{
     padding: 5rem;
     flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 .auth__title{
@@ -26,6 +40,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .auth__input{
@@ -49,22 +64,53 @@
 
 .auth__logo{
     width: 100%;
-    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary), #fff);
+    background-size: 500%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    animation: animateGradient ease 10s ;
+}
+
+@keyframes animateGradient {
+    0%{
+        background-position: 100% 300%;
+    }
+
+    100%{
+        background-position: 0% 0%;
+
+    }
 }
 
 .auth__logoText{
-    font-size: 5rem;
+    font-size: 5.5rem;
     justify-self: center;
     color: #fff;
+    animation: fadeInText 3s ease ;
+}
+
+@keyframes fadeInText{
+    0%{
+        opacity: 0;
+        scale: 50%;
+    } 
+    80%{
+        opacity: 1;
+        scale: 120%
+    }
+    100%{
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
 .auth__button-box{
     width: 90%;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
 }
 
 .auth__button-box button{

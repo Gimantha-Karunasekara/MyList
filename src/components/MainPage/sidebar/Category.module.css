@@ -1,18 +1,10 @@
-.categories__container{
-    margin-top: 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-
-    font-size: 2rem;
-}
-
 .category{
-    width: 70%;
+    width: 80%;
     margin: 1rem auto;
     padding: 1.5rem;
     cursor: pointer;
     display: flex;
+    justify-content: center;
     color: var(--color-grey-1);
 }
 
@@ -37,8 +29,10 @@
 
 .category__delete{
     display: inline-block;
+    margin-left: 1rem;
     opacity: 0;
     transition: all .2s;
+    z-index: 1;
 }
 
 .category:hover .category__delete{

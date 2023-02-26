@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 import './App.css';
 import Auth from './components/auth/Auth';
-import MainPage from './components/MainPage';
+import MainPage from './components/MainPage/MainPage';
 import { AuthContext } from './context/auth-context';
 
 function App() {
