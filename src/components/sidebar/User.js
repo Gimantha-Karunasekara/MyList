@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../context/auth-context';
 import classes from './User.module.css';
 
 const User = (props) => {
+
+  const authCtx = useContext(AuthContext);
+
+  const logOutHandler = (event) => {
+    event.preventDefault();
+
+    authCtx.logout();
+  };
+
   return (
     <div className={classes.user}>
       <div className={classes.user__logout}>
-        <button className={classes["user__logout-button"]}>
+        <button className={classes["user__logout-button"]} onClick={logOutHandler}>
           <i className="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
           Logout
         </button>
