@@ -55,7 +55,7 @@ const SideBar = ({changeCategory, selectedCategory}) => {
   // delete category and remove from state
   const deleteCategoryHandler = async(categoryId) => {
     try {
-        await sendRequest(`http://localhost:5000/api/categories/${categoryId}`, 'DELETE');
+        await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/categories/${categoryId}`, 'DELETE');
         if (!error) {
           setCategories(prevState => prevState.filter(c => c.id !== categoryId));
         }
