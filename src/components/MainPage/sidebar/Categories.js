@@ -9,7 +9,7 @@ const Categories = ({ categories, changeCategory, isLoading, error, deleteCatego
     return (
         <div className={classes.categories__container}>
             {isLoading && <LoadingSpinner/>}
-            {error && <p className={classes.categories__msg}>{error && {error}}</p>}
+            {error && <p className={classes.categories__msg}>{error.message}</p>}
             {!isLoading && !error && categories.map((c) => {
                 return (
                     <Category 

@@ -12,12 +12,11 @@ function App() {
 
   return (
     <Router>
-      <main>
         <Routes>
-          <Route path='/' element={authCtx.isLoggedIn ? <MainPage/> : <Auth />} />
-          <Route path='*' element={<Navigate to="/" replace />} />
+          <Route path='/' element={authCtx.isLoggedIn ? <MainPage/> : <Navigate to='/auth'/>}/>
+          <Route path='/auth' element={authCtx.isLoggedIn ? <Navigate to='/'/> : <Auth/>} />
+          <Route path='*' element={authCtx.isLoggedIn ? <Navigate to='/'/> : <Navigate to='/auth'/>} />
         </Routes>
-      </main>
     </Router>
   );
 }

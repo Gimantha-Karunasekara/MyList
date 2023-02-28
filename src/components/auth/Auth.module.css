@@ -54,6 +54,10 @@
     margin: 2rem 0;
 }
 
+.auth__input:disabled{
+    color: var(--color-grey-2);
+}
+
 .auth__input:focus{
     border-color: var(--color-secondary);
 }
@@ -126,5 +130,10 @@
 
 .auth__button-box button:hover{
     background: var(--color-secondary);
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
 }
 

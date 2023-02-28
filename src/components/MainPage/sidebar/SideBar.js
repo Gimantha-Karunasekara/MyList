@@ -35,10 +35,15 @@ const SideBar = ({changeCategory, selectedCategory}) => {
   },[sendRequest,AuthCtx.userId]);
 
   useEffect(() => {
-    if (firstLoad && categories[0]) {
-      changeCategory(categories[0].id);  
-      setFirstLoad(false);
+    try {
+      if (firstLoad && categories[0]) {
+        changeCategory(categories[0].id);  
+        setFirstLoad(false);
+      }
+    } catch (error) {
+      
     }
+    
 
   }, [firstLoad, changeCategory, categories])
   

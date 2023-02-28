@@ -70,7 +70,7 @@ const Auth = () => {
                         {!isLogin && <input ref={nameRef} type="text" className={classes.auth__input} placeholder="Username" disabled={isLoading ? true : false }/>}
                         <input ref={emailRef} type="text" className={classes.auth__input} placeholder="Email" disabled={isLoading ? true : false }/>
                         <input ref={passwordRef} type="password" className={classes.auth__input} placeholder="Password" disabled={isLoading ? true : false }/>
-                        <p className={classes.error}>{error ? error : ''}</p>
+                        <p className={classes.error}>{error ? error : ""}</p>
                     </div>
                     <div className={classes["auth__button-box"]}>
                         <button type='submit'  className={classes.auth__submit}>{isLoading ? "Loading..." : isLogin ? "Login" : "Signup"}</button>
