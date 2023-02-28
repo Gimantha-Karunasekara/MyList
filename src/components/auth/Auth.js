@@ -73,8 +73,8 @@ const Auth = () => {
                         <p className={classes.error}>{error ? error : ""}</p>
                     </div>
                     <div className={classes["auth__button-box"]}>
-                        <button type='submit'  className={classes.auth__submit}>{isLoading ? "Loading..." : isLogin ? "Login" : "Signup"}</button>
-                        <button type='button' onClick={authSwitchHandler}>{isLogin ? "Signup" : "Login"}</button>
+                        <button type='submit' className={classes.button}>{isLoading ? "Loading..." : isLogin ? "Login" : "Signup"}</button>
+                        <button type='button' className={classes["button-alt"]} onClick={authSwitchHandler}>{isLogin ? "Signup" : "Login"}</button>
                     </div>
                 </form>
                 <div className={classes.auth__logo}>

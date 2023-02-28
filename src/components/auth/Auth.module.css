@@ -1,6 +1,6 @@
 .auth__container{
     width: 60%;
-    height: 70%;
+    min-height: 70%;
     margin: 0 auto;
     align-self: center;
     border-radius: 10px;
@@ -113,23 +113,40 @@
 .auth__button-box{
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-grow: 1;
 }
 
-.auth__button-box button{
-    border: none;
-    color: #fff;
-    background: var(--color-primary);
+.button,.button-alt{
+    
     border-radius: 10px;
     margin-top: 2rem;
     font-size: 2rem;
     width: 15rem;
     height: 5rem;
+    transition: all .2s;
 }
 
-.auth__button-box button:hover{
+.button{
+    border: none;
+    color: #fff;
+    background: var(--color-primary);
+}
+
+.button:hover{
     background: var(--color-secondary);
+}
+
+.button-alt{
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: #fff;
+}
+
+.button-alt:hover{
+    background-color: var(--color-primary);
+    color: #fff;
+
 }
 
 .error{

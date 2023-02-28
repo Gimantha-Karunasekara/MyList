@@ -1,12 +1,13 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { useHttpClient } from '../../../hooks/http-hook';
+import LoadingSpinner from '../../common/LoadingSpinner';
 import AddTask from './AddTask';
 import classes from './Content.module.css';
 import Tasks from './Tasks';
 
 const Content = ({ category }) => {
 
-  const { sendRequest} = useHttpClient();
+  const { sendRequest, isLoading} = useHttpClient();
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState();
 
@@ -45,15 +46,16 @@ const Content = ({ category }) => {
 
   return (
     <div className={classes.content}>
-      {category ? 
+      {category && !isLoading &&
       <Fragment>
         <div className={classes.content__title}>
           {title}
         </div>
         <AddTask onAdd={addTaskHadnler} category={category} />
         <Tasks tasks={tasks} onDelete={deleteTaskHandler} />
-      </Fragment> : noCategory}
-      
+      </Fragment>}
+      {!category && noCategory}
+      {isLoading && <LoadingSpinner/>}
     </div>
   )
 }
